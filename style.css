@@ -1,0 +1,83 @@
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 100%;
+  background-image: linear-gradient(to bottom, #615dad, #ffc8da);
+}
+
+.game {
+  max-width: 365px;
+  margin: 65px auto;
+}
+
+/* header */
+
+.header__pic {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  vertical-align: bottom;
+}
+
+/* description */
+
+.description {
+  color: #ffffff;
+  background-color: #283e50;
+  padding: 30px 15px;
+}
+
+.description__title {
+  font-family: 'Lobster', cursive;
+  font-size: 3em;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.description__text {
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* buttons */
+
+.button {
+  display: block;
+  font-size: 1em;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.button--rules {
+  background-color: #1fcca4;
+}
+
+.button--rules:hover {
+  background-color: #1cbb96;
+}
+
+.button--start {
+  background-color: #0197f6;
+  border-top: 1px solid #283e50;
+}
+
+.button--start:hover {
+  background-color: #0090e9;
+}
