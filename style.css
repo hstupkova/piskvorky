@@ -21,6 +21,20 @@ body {
 .game {
   max-width: 365px;
   margin: 65px auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.game-rules {
+  margin: 65px 10px 40px 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+@media screen and (min-width: 820px) {
+  .game-rules {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* header */
@@ -31,7 +45,7 @@ body {
   vertical-align: bottom;
 }
 
-/* description */
+/* description, rules */
 
 .description {
   color: #ffffff;
@@ -39,7 +53,15 @@ body {
   padding: 30px 15px;
 }
 
-.description__title {
+.rules {
+  color: #ffffff;
+  background-color: #283e50;
+  padding: 40px 30px;
+  border-radius: 5px 5px 0 0;
+}
+
+.description__title,
+.rules__title {
   font-family: 'Lobster', cursive;
   font-size: 3em;
   font-weight: normal;
@@ -51,6 +73,16 @@ body {
   font-size: 1em;
   line-height: 1.5;
   text-align: center;
+}
+
+/* ordered list */
+.list {
+  padding-left: 50px;
+  margin-bottom: 40px;
+}
+
+.list__item {
+  margin-bottom: 1em;
 }
 
 /* buttons */
@@ -65,19 +97,69 @@ body {
   padding-bottom: 1em;
 }
 
-.button--rules {
+.button--top {
   background-color: #1fcca4;
 }
 
-.button--rules:hover {
+.button--top:hover {
   background-color: #1cbb96;
 }
 
-.button--start {
+.button--bottom {
   background-color: #0197f6;
   border-top: 1px solid #283e50;
 }
 
-.button--start:hover {
+.button--bottom:hover {
   background-color: #0090e9;
+}
+
+/* symbols */
+
+.symbol {
+  width: 1em;
+  height: 1em;
+  vertical-align: bottom;
+  filter: invert(100%);
+}
+
+/* images with caption */
+
+.figure {
+  margin-bottom: 40px;
+}
+
+.row:last-child .figure:last-child {
+  margin-bottom: 0;
+}
+
+.figure__image {
+  width: 100%;
+}
+
+.figure__caption {
+  font-size: 1em;
+  font-style: italic;
+  text-align: center;
+  padding-top: 0.5em;
+}
+
+/* rows of figures */
+
+@media screen and (min-width: 576px) {
+  .row {
+    display: flex;
+  }
+
+  .figure {
+    flex: 1 1 50%;
+  }
+
+  .figure:first-child {
+    margin-right: 30px;
+  }
+
+  .row:last-child .figure:first-child {
+    margin-bottom: 0;
+  }
 }
