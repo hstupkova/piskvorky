@@ -37,6 +37,11 @@ body {
   }
 }
 
+.game-play {
+  max-width: 80vmin;
+  margin: 65px auto;
+}
+
 /* header */
 
 .header__pic {
@@ -45,7 +50,7 @@ body {
   vertical-align: bottom;
 }
 
-/* description, rules */
+/* description, rules, game-play */
 
 .description {
   color: #ffffff;
@@ -61,12 +66,17 @@ body {
 }
 
 .description__title,
-.rules__title {
+.rules__title,
+.game-play__title {
   font-family: 'Lobster', cursive;
   font-size: 3em;
   font-weight: normal;
   text-align: center;
   margin-bottom: 0.5em;
+}
+
+.game-play__title {
+  color: white;
 }
 
 .description__text {
@@ -101,7 +111,8 @@ body {
   background-color: #1fcca4;
 }
 
-.button--top:hover {
+.button--top:hover,
+.button--top:focus {
   background-color: #1cbb96;
 }
 
@@ -110,7 +121,8 @@ body {
   border-top: 1px solid #283e50;
 }
 
-.button--bottom:hover {
+.button--bottom:hover,
+.button--bottom:focus {
   background-color: #0090e9;
 }
 
@@ -162,4 +174,88 @@ body {
   .row:last-child .figure:first-child {
     margin-bottom: 0;
   }
+}
+
+/* controls */
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.controls__player {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.controls__text {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 0.5em;
+}
+
+.controls__symbol {
+  width: 1em;
+  height: 1em;
+  filter: invert(100%);
+}
+
+.controls__home,
+.controls__restart {
+  display: inline-block;
+  width: 40px;
+  height: 45px;
+  padding: 10px 8px;
+  border-radius: 4px;
+}
+
+.controls__home {
+  background-color: #1fcca4;
+}
+
+.controls__home:hover,
+.controls__home:focus {
+  background-color: #1cbb96;
+}
+
+.controls__restart {
+  background-color: #0197f6;
+}
+
+.controls__restart:hover,
+.controls__restart:focus {
+  background-color: #0090e9;
+}
+
+.controls__home img,
+.controls__restart img {
+  max-width: 100%;
+}
+
+/* playing grid */
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  border: 1px solid black;
+}
+
+.grid__square {
+  flex: 1 1 10%;
+
+  height: calc(80vmin * 0.1);
+
+  background-color: #BEB2D7;
+  border: 1px solid black;
+}
+
+.grid__square:hover,
+.grid__square:focus {
+  background-color: #CEC4DF;
 }
