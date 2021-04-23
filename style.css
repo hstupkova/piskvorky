@@ -38,7 +38,7 @@ body {
 }
 
 .game-play {
-  max-width: 80vmin;
+  width: 80vmin;
   margin: 65px auto;
 }
 
@@ -187,6 +187,8 @@ body {
 }
 
 .controls__player {
+  font-size: 1.5em;
+
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -243,13 +245,16 @@ body {
   display: flex;
   flex-wrap: wrap;
 
+  width: 80vmin;
+  height: 80vmin;
+
   border: 1px solid black;
 }
 
 .grid__square {
   flex: 1 1 10%;
 
-  height: calc(80vmin * 0.1);
+  height: 10%;
 
   background-color: #BEB2D7;
   border: 1px solid black;
@@ -258,4 +263,32 @@ body {
 .grid__square:hover,
 .grid__square:focus {
   background-color: #CEC4DF;
+}
+
+@keyframes showSymbol {
+	0% {
+		background-size: 0%;
+	}
+
+	100% {
+		background-size: 65%;
+	}
+}
+
+.grid__square--circle {
+  background-image: url('circle.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 65%;
+
+  animation: showSymbol 0.15s;
+}
+
+.grid__square--cross {
+  background-image: url('cross.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 65%;
+
+  animation: showSymbol 0.15s;
 }
