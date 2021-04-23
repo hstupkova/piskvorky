@@ -3,16 +3,19 @@
 let player = 'circle';
 const gridSquareElmArr = document.querySelectorAll('.grid__square');
 
-const addSymbol = ({srcElement}) => {
-  if (!srcElement.classList.contains('grid__square--circle') && !srcElement.classList.contains('grid__square--cross')) {
-    srcElement.classList.add(`grid__square--${player}`);
-    srcElement.disabled = true;
+const addSymbol = ({target}) => {
+  if (!target.classList.contains('grid__square--circle') && !target.classList.contains('grid__square--cross')) {
+    target.classList.add(`grid__square--${player}`);
+    target.disabled = true;
+    const controlsSymbolElm = document.querySelector('.controls__symbol');
     if (player === 'circle') {
       player = 'cross';
-      document.querySelector('.controls__symbol').src = 'cross.svg';
+      controlsSymbolElm.src = 'cross.svg';
+      controlsSymbolElm.alt = 'symbol křížku';
     } else {
       player = 'circle';
-      document.querySelector('.controls__symbol').src = 'circle.svg';
+      controlsSymbolElm.src = 'circle.svg';
+      controlsSymbolElm.alt = 'symbol kolečka';
     }
   }
 };
