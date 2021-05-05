@@ -20,12 +20,12 @@ body {
 
 .game {
   max-width: 365px;
-  margin: 65px auto;
+  margin: 20px auto;
   border-radius: 5px 5px 0 0;
 }
 
 .game-rules {
-  margin: 65px 10px 40px 10px;
+  margin: 20px 10px;
   border-radius: 5px 5px 0 0;
 }
 
@@ -39,7 +39,7 @@ body {
 
 .game-play {
   width: 80vmin;
-  margin: 65px auto;
+  margin: 20px auto;
 }
 
 /* header */
